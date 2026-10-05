@@ -1,3 +1,10 @@
+from django.shortcuts import render
+from django.utils import timezone
+from .models import Post
+from .forms import PostForm
+from django.shortcuts import redirect
+
+
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
